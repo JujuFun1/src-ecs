@@ -39,7 +39,7 @@ class CheckoutController extends AbstractController
            ->findCurrentWithType($this->getUser()->getId(), 'billing');
         if (null === $billingAddress) {
             $this->addFlash('info', 'Veuillez renseigner une adresse de facturation avant de continuer');
-            return $this->redirectToRoute('user_account');
+            return $this->redirectToRoute('accountAddress');
         }
 
         $address = $addressRepository
