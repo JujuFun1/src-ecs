@@ -79,8 +79,9 @@ class DevisForm extends AbstractType
             ])
 
            ->add('news_letter', CheckboxType::class, [
+               'label'    => 'Newsletter',
               'required' => false,
-              'attr' => ['placeholder' => 'Nom', 'class' => 'form-control-lg'],
+              'attr' => ['placeholder' => 'NewsLetter', 'class' => 'form-control-lg'],
            ])
             ->add('submit', SubmitType::class, ['label' => 'Valider mon inscription',
                 'attr' => [
